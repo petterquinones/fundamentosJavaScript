@@ -1,16 +1,16 @@
-/**Objetos:
- * Es una estructura de datos que almacena información mediante propiedad y valor.
- * y que ademas puede contener funciones internas llamadas metodos, para generar interacciones.
- * objeto{
- * propiedad: Valor,
- * propiedad: Valor,
- * propiedad: valor,
- * Metodos: funciones (acciones).
- * }
- * 
- * Podemos borrar propiedades y métodos:/ 
- * delete object.propiedad.
- */
+// ** Objetos:
+//  * Es una estructura de datos que almacena información mediante propiedad y valor.
+//  * y que ademas puede contener funciones internas llamadas metodos, para generar interacciones.
+//  * objeto{
+//  * propiedad: Valor,
+//  * propiedad: Valor,
+//  * propiedad: valor,
+//  * Metodos: funciones (acciones).
+//  * }
+//  * 
+//  * Podemos borrar propiedades y métodos:/ 
+//  * delete object.propiedad.
+//  */
 
 // const persona = {
 //     nombre: "John",
@@ -86,47 +86,62 @@
 // const persona1 = new Persona("Sara", "Lodoño", 32);
 // persona1.saludar();
 
-/* class Animal {
-    constructor(nombre, tipo) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-    }
+// class Animal {
+//     constructor(nombre, tipo) {
+//         this.nombre = nombre;
+//         this.tipo = tipo;
+//     }
 
-    emitirSonido() {
-        console.log("El animal emite un sonido...  ");
-    }
-}
- */
+//     emitirSonido() {
+//         console.log("El animal emite un sonido...  ");
+//     }
+// }
+
 //Herencia en js 
-/* class Perro extends Animal {
-    constructor(nombre, tipo, raza) {
-        super(nombre, tipo);
-        this.raza = raza;
-    }
+//  class Perro extends Animal {
+//     constructor(nombre, tipo, raza) {
+//         super(nombre, tipo);
+//         this.raza = raza;
+//     }
 
-    emitirSonido() {
-        console.log("El perro Ladra...");
-    }
+//     emitirSonido() {
+//         console.log("El perro Ladra...");
+//     }
 
-    correr() {
-        console.log(`El perro ${this.nombre} corre Alegremente.`);
-    }
-}
+//     correr() {
+//         console.log(`El perro ${this.nombre} corre Alegremente.`);
+//     }
+// }
 
-const perrito = new Perro("Agustina", "Pequeñito", "Criollito");
+// const perrito = new Perro("Agustina", "Pequeñito", "Criollito");
 
-console.log(perrito);
-perrito.emitirSonido();
-perrito.correr();
+// console.log(perrito);
+// perrito.emitirSonido();
+// perrito.correr();
 
 //Agregar un nuevo método, este metodo se agrega a la isntancia, no a la clase constructora o clase padre, por ende no se va a visualizar en el prototype, en ese mismo orden de ideas tambien podemos importante, el metodo prototype solo se crea con las clases constructoras.
 
-perrito.dormi = function () {
-    console.log("El perrito ya esta durmiendo...")
+// perrito.dormi = function () {
+//     console.log("El perrito ya esta durmiendo...")
+// }
+
+// perrito.dormi();
+//** Para llegar al prototype actual es, Object.getPrototypeOf */
+// this ---> es una palabra reservada que utilizamos al momento de trabajar con clases, hace referecia al objeto mismo o a la clase 
+// Utilizamos la palabra This para poder hacer referencia a los parametros del constructor,
+
+class Persona {
+    constructor(nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
 }
 
-perrito.dormi();
+const persona1 = new Persona("Sara", 32);
 
- */
+persona1.nuevoMetodo = function(){
+    console.log(`Mi nombre es: ${this.nombre} y tengo ${this.edad} años.`)
+}
 
-console.log("Prueba");
+persona1.nuevoMetodo();
+
