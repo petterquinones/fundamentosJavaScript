@@ -8,7 +8,7 @@
  * Metodos: funciones (acciones).
  * }
  * 
- * Podemos borrar propiedades y métodos: 
+ * Podemos borrar propiedades y métodos:/ 
  * delete object.propiedad.
  */
 
@@ -86,29 +86,29 @@
 // const persona1 = new Persona("Sara", "Lodoño", 32);
 // persona1.saludar();
 
-class Animal {
-    constructor(nombre, tipo){
+/* class Animal {
+    constructor(nombre, tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
     }
 
-    emitirSonido(){
+    emitirSonido() {
         console.log("El animal emite un sonido...  ");
     }
 }
-
+ */
 //Herencia en js 
-class Perro extends Animal {
-    constructor(nombre, tipo, raza){
+/* class Perro extends Animal {
+    constructor(nombre, tipo, raza) {
         super(nombre, tipo);
         this.raza = raza;
     }
 
-    emitirSonido(){
+    emitirSonido() {
         console.log("El perro Ladra...");
     }
 
-    correr(){
+    correr() {
         console.log(`El perro ${this.nombre} corre Alegremente.`);
     }
 }
@@ -119,10 +119,14 @@ console.log(perrito);
 perrito.emitirSonido();
 perrito.correr();
 
-//Agregar un nuevo método
+//Agregar un nuevo método, este metodo se agrega a la isntancia, no a la clase constructora o clase padre, por ende no se va a visualizar en el prototype, en ese mismo orden de ideas tambien podemos importante, el metodo prototype solo se crea con las clases constructoras.
 
-perrito.dormi = function(){
+perrito.dormi = function () {
     console.log("El perrito ya esta durmiendo...")
 }
 
 perrito.dormi();
+
+ */
+
+console.log("Prueba");
