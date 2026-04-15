@@ -118,3 +118,11 @@ const perrito = new Perro("Agustina", "Pequeñito", "Criollito");
 console.log(perrito);
 perrito.emitirSonido();
 perrito.correr();
+
+//Agregar un nuevo método
+
+perrito.dormi = function(){
+    console.log("El perrito ya esta durmiendo...")
+}
+
+perrito.dormi();
