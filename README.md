@@ -110,11 +110,11 @@ d /= 3; // d = d / 3
 console.log(d); // 5
 ```
 
-+=: suma y reasigna en la misma línea.  
--=: resta y actualiza el valor.  
-*=: multiplica y guarda el resultado.  
-/=: divide y persiste el cociente.  
-Clave: let permite cambiar el valor de la variable.  
+- +=: suma y reasigna en la misma línea.  
+- -=: resta y actualiza el valor.  
+- *=: multiplica y guarda el resultado.  
+- /=: divide y persiste el cociente.  
+- Clave: let permite cambiar el valor de la variable.  
 
 **Template literal**
 Permiten evaluar expresiones dentro de ${}, también facilita la creación de texto multilinea.
@@ -139,4 +139,59 @@ Este es el contenido
 `;
 console.log(nota);
 ```
+
+### Métodos esenciales de String  
+- **length**: devuelve cuantos caracteres tiene un texto.
+```
+const texto = "hola mundo";
+texto.length; // 10
+```
+- **slice**: Extrae desde el indice de inicio, hasta el fin sin incluir el fin, acepta indices negativos para contar desde el final.
+- **substring**: Es igual pero no acepta indices negativos.
+
+```
+const texto1 = "JavaScript es genial";
+texto1.slice(0, 10);   // "JavaScript"
+texto1.slice(11);      // "es genial"
+texto1.slice(-6);      // "genial"
+
+const texto2 = "hola mundo";
+texto2.substring(0, 4); // "hola"
+```
+
+- **split**: divide un string usando un separador y devuelve un array.
+```
+const texto3 = "línea uno, línea dos, línea tres";
+texto3.split(", "); // ["línea uno", "línea dos", "línea tres"]
+```
+- **trim**: Elimina espacios al inicio y al final.
+```
+const crudo = "  hola mundo  ";
+crudo.trim();      // "hola mundo"
+// submétodos:
+crudo.trimStart(); // elimina al inicio
+crudo.trimEnd();   // elimina al final
+```
+
+- **toLowerCase** - **toUpperCase**: Estandarizar mayusculas y minusculas.
+```
+const palabra = "JavaScript";
+palabra.toLowerCase(); // "javascript"
+palabra.toUpperCase(); // "JAVASCRIPT"
+```
+
+**Buscar, Validar y reemplazar**
+- **include** Confirma la presencia de una subcadena y devuelve true o false.
+```
+const contenido = "aprende JavaScript desde cero";
+contenido.includes("JavaScript"); // true
+contenido.includes("Python");     // false
+```
+- **Validar inicio - fin**: Util para revisar prefijos y/o extenciones de archivos.
+```
+const archivo = "documento.md";
+archivo.startsWith("doc"); // true
+archivo.endsWith(".md");   // true
+```
+- **repace**: Reemplazar sin mutar originales, crea un nuevo string con el cambio sin mutar el original.
 
