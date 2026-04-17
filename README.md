@@ -195,3 +195,21 @@ archivo.endsWith(".md");   // true
 ```
 - **repace**: Reemplazar sin mutar originales, crea un nuevo string con el cambio sin mutar el original.
 
+```
+const texto6 = "hola mundo, hola JavaScript";
+const cambiado = texto6.replace("hola", "hi");
+// cambiado: "hi mundo, hola JavaScript"
+// texto6 sigue igual: "hola mundo, hola JavaScript"
+```
+
+#### Puntos clave para fijar aprendizaje:
+
+- length: cuenta caracteres.
+- slice y substring: extraen partes, solo slice acepta índices negativos.
+- split: divide en array por separador.
+- trim: limpia espacios; sus submétodos atienden inicio o fin.
+- toLowerCase/toUpperCase: normalizan para comparación confiable.
+- includes: búsqueda rápida que retorna true/false.
+- Validación de prefijo y sufijo: inicio y extensión, como en "documento.md".
+- replace: reemplaza sin modificar el original por la inmutabilidad de los strings.
+
