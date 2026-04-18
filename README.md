@@ -213,3 +213,85 @@ const cambiado = texto6.replace("hola", "hi");
 - Validación de prefijo y sufijo: inicio y extensión, como en "documento.md".
 - replace: reemplaza sin modificar el original por la inmutabilidad de los strings.
 
+## Igualdad debil( == ) vs Igualdad estricta( === )
+Con igualdad débil el motor intenta convertir tipos antes de comparar, la igualdad estricta permite comparar valor y tipo, evitando la conversión.  
+```
+console.log(5 == '5');      // true
+console.log(true == 1);     // true
+console.log(false == 0);    // true
+console.log(null == undefined); // true
+```
+**Claves:**
+
+- La coerción intenta alinear tipos antes de comparar.
+- Valores distintos como número 5 y string '5' pueden considerarse iguales.
+- En contexto booleano, combinaciones como null y undefined terminan siendo equivalentes.
+- Estos casos dificultan el control de errores y la lectura del código.
+
+```
+console.log(5 != '5'); // false
+```
+*La comparación estricta evita comparaciones*
+```
+console.log(5 === 5);    // true
+console.log(5 === '5');  // false
+```
+
+*Buenas práticas*
+Usa === y !== por defecto.  
+Evita == y != para prevenir resultados inesperados. 
+
+## Operadores Lógicos  
+Los operadores lógicos permiten combinar, negar y evaluar múltiples condiciones.  
+Son fundamentales para controlar el flujo de tu aplicación, decidir si un usuario puede avanzar a un bloque específico y validar permisos como administrador o usuario activo.  
+- Tres operadores principales: AND (&&), OR (||) y NOT (!).
+- Devuelven resultados en valor booleano: true o false.
+- Útiles para permisos y estados: es administrador, es usuario, está activo.
+
+## Sentencia If-else  
+Forma parte del control de flujo condicional, evalua una expresión y según sea verdadera o falsa, ejecuta uno u otro bloque de código.
+
+```
+const edad = 18;
+
+if (edad >= 19) {
+  console.log('eres mayor de edad');
+} else if (edad === 18) {
+  console.log('Tienes dieciocho años');
+} else {
+  console.log('eres menor de edad');
+}
+```
+## Sentencia switch
+Es una estructura de control que compara una misma expresión con varios valores y ejecuta el código del caso que coincide, para entenderlo mejor como:  
+- Elegir un menú: Una sola elección valida entre varias.
+Switch es ideal cuando comparas un unico valor contra varias opciones.
+- Evita cadenas largas de condiciones.
+- Ordena el código cuando hay varias opciones de cadenas discretas.
+- Compara una misma expresión con varios casos.
+
+### Como se compone la estructura
+- **Switch (expresión)**: inicia el bloque y define qué se evaluará.
+- **Case valor**: ejecuta si coincide con la expresión.
+- **Break**: corta la ejecución y evita que se ejecute el siguiente caso.
+- **Default**: opción por defecto cuando no coincide ningún caso.
+- Es clave respetar la estructura y los dos puntos tras cada case.
+```
+const dia = "lunes"; // un string con el día seleccionado
+
+switch (dia) {
+  case "lunes":
+  case "martes":
+  case "miércoles":
+  case "jueves":
+  case "viernes":
+    console.log("día laboral");
+    break;
+  case "sábado":
+  case "domingo":
+    console.log("fin de semana");
+    break;
+  default:
+    console.log("día no válido");
+}
+```
