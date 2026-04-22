@@ -295,3 +295,39 @@ switch (dia) {
     console.log("día no válido");
 }
 ```
+
+## Estructura For
+```
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+## For con arrays
+```
+const notas = ['nota uno', 'nota dos', 'nota tres'];
+
+for (let i = 0; i < notas.length; i++) {
+  console.log(`Índice: ${i} -> Nota: ${notas[i]}`);
+}
+```
+## For-of ( Para recorrer arrays)
+
+```
+const frutas = ['manzana', 'pera', 'uva'];
+
+for (const fruta of frutas) {
+  console.log(fruta);
+  if (fruta === 'manzana') {
+    console.log('Es una rica manzana');
+  }
+}
+```
+
+## For-in ( Para recorrer Objetos )
+```
+const persona = { nombre: 'Ana', edad: 25 };
+
+for (const clave in persona) {
+  console.log(`Clave: ${clave} -> Valor: ${persona[clave]}`);
+}
+```
